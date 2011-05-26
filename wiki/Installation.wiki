@@ -9,7 +9,10 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
 
 Installation Steps :
   # Download mysql 5.1.48 source code if you don't have. Link is http://downloads.mysql.com/archives/mysql-5.1/mysql-5.1.48.tar.gz
-  # Decompress the mysql source code. like: {{{tar zvxf mysql-5.1.48.tar.gz}}}
-  # Apply the patch in the source root directory like: {{{patch -p0 < ./row_cache_for_mysql.5.1.48_2011_05_11.diff }}}
-  # Configure. like: {{{ CFLAGS="-O3" CXX=gcc CXXFLAGS="-O3 -felide-constructors -fno-exceptions -fno-rtti" ./configure --prefix=/usr/mysql --with-extra-charsets=all --with-plugins=partition,heap,innobase,myisam,myisammrg,csv --enable-assembler}}}
+  # Decompress the mysql source code. 
+     * {{{tar zvxf mysql-5.1.48.tar.gz}}}
+  # Apply the patch in the source root directory .
+     * {{{patch -p0 < ./row_cache_for_mysql.5.1.48_2011_05_11.diff }}}
+  # Configure. 
+     * {{{ CFLAGS="-O3" CXX=gcc CXXFLAGS="-O3 -felide-constructors -fno-exceptions -fno-rtti" ./configure --prefix=/usr/mysql --with-extra-charsets=all --with-plugins=partition,heap,innobase,myisam,myisammrg,csv --enable-assembler}}}
   # make && make install
