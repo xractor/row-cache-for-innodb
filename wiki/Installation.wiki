@@ -52,7 +52,7 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
   * Innodb_row_cache_mem_pool_used 
     * Used size in Row Cache's mem pool
 
-  When you run {{{show innodb status}}},you can see some message more then original one, which like:
+  When you run "{{{show innodb status}}}",you can see some message more then original one, which like:
 {{{
 ----------------------
 ROW CACHE
