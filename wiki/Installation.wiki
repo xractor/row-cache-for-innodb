@@ -31,3 +31,39 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
   * innodb_row_cache_mutex_num_shift
      * the shift for row cache mutex num, more large higher concurrency ,it can refer to {{{innodb_thread_concurrency}}} ,recommend {{{(1<<innodb_row_cache_mutex_num_shift)}}} slightly higher than {{{innodb_thread_concurrency }}}.
      * default is 6
+
+== Status ==
+
+  You can find more status where run {{{show status}}},it is:
+  * Innodb_row_cache_n_get
+    * Total number which get from Row Cache, it inculde the missing gets.
+  * Innodb_row_cache_n_geted  
+    * The number of real geted from Row Cache ,it exculde the missing gets.
+  * Innodb_row_cache_lru_count
+    * Total number which Row Cache is cached.
+  * Innodb_row_cache_lru_n_add 
+    * Number of row added to Row Cache.
+  * Innodb_row_cache_lru_n_evict
+    * Number of row evicted from Row Cache.
+  * Innodb_row_cache_lru_n_make_first
+    * Number of row which is made first to LRU list
+  * Innodb_row_cache_mem_pool_size
+    * The mem pool size of Row Cache.
+  * Innodb_row_cache_mem_pool_used 
+    * Used size in Row Cache's mem pool
+
+  When you run {{{show innodb status}}},you can see some message more then original one, which like:
+{{{
+----------------------
+ROW CACHE
+----------------------
+Total memory allocated 5368709120; used 5367472576 (999 / 1000); Total LRU count 12569422
+Row total add 30544838 , 344.35 add/s
+Row total make first 771088189 , 13720.31 mf/s
+Row total evict 17975130 , 332.97 evict/s
+Row read from cache 802835501, 14085.11 read/s
+Row get from cache 772330451, 13740.67 get/s
+Row cache hit rate 975 / 1000
+}}}
+you can see cache hit!
+  
