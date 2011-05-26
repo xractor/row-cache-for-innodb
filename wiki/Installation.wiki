@@ -65,5 +65,5 @@ Row read from cache 802835501, 14085.11 read/s
 Row get from cache 772330451, 13740.67 get/s
 Row cache hit rate 975 / 1000
 }}}
-you can see cache hit!
+  you can see cache hit!
   
