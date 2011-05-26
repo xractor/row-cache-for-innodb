@@ -1,7 +1,7 @@
 #labels Phase-Deploy
 = Installation=
 
-Tell you how to install row cache for innodb.
+How to install row cache for innodb.
 The patch is for mysql 5.1.48 and innodb plugin 1.0.9
 
 
