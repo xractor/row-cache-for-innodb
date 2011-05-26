@@ -1,14 +1,15 @@
 #summary One-sentence summary of this page.
 #labels Phase-Deploy
 
-= Introduction =
+= Installation=
 
-Add your content here.
+Tell you how to install row cache for innodb.
+The patch is for mysql 5.1.48 and innodb plugin 1.0.9
 
 
-= Details =
+== Details ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Installation Steps :
+  # Download mysql 5.1.48 source code if you don't have.link is http://downloads.mysql.com/archives/mysql-5.1/mysql-5.1.48.tar.gz
+  # Headings, paragraphs, and lists
+  # Automatic links to other wiki pages
