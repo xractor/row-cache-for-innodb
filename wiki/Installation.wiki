@@ -5,9 +5,8 @@ Tell you how to install row cache for innodb.
 The patch is for mysql 5.1.48 and innodb plugin 1.0.9
 
 
-== Details ==
+== Installation Steps ==
 
-Installation Steps :
   # Download mysql 5.1.48 source code if you don't have. Link is http://downloads.mysql.com/archives/mysql-5.1/mysql-5.1.48.tar.gz
   # Decompress the mysql source code. 
      * {{{tar zvxf mysql-5.1.48.tar.gz}}}
@@ -16,3 +15,11 @@ Installation Steps :
   # Configure. 
      * {{{ CFLAGS="-O3" CXX=gcc CXXFLAGS="-O3 -felide-constructors -fno-exceptions -fno-rtti" ./configure --prefix=/usr/mysql --with-extra-charsets=all --with-plugins=partition,heap,innobase,myisam,myisammrg,csv --enable-assembler}}}
   # make && make install
+
+== Setting ==
+
+  Setting added in my.cnf:
+  * innodb_row_cache_mem_pool_size: the size of row cache used in memory,default is 1M
+  * innodb_row_cache_on: the switch for row cache,if you want enable row cache,it need to be ON, default is OFF.
+  * innodb_row_cache_cell_num: the row cache used hash table's cell num,default is 1000
+  * innodb_row_cache_mutex_num_shift: the shift for row cache mutex num, more large higher concurrency ,it can refer to {{{{innodb_thread_concurrency}}} ,recommend {{{(1<<innodb_row_cache_mutex_num_shift)}}} slightly higher than {{{innodb_thread_concurrency }}}
