@@ -32,6 +32,9 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
      * the shift for row cache mutex num, more large higher concurrency ,it can refer to {{{innodb_thread_concurrency}}} ,recommend {{{(1<<innodb_row_cache_mutex_num_shift)}}} slightly higher than {{{innodb_thread_concurrency }}}.
      * default is 6
   === add for row_cache_for_mysql.5.1.48_2011_06_16.diff ===
+  * row_cache_additional_mem_pool_size
+     * the size of additional for misc memory allocate
+     * default is 1M
   * row_cache_index
      * you can set index which can be cached!
      * like {{{test/test_large:idx_age}}}, {{{test}}} is DB , {{{test_large}}} is TABLE, {{{idx_age}}} is INDEX,if you want to cache primary key, use {{{PRIMARY}}}
