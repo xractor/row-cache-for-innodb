@@ -37,6 +37,14 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
      * like {{{test/test_large:idx_age}}}, {{{test}}} is DB , {{{test_large}}} is TABLE, {{{idx_age}}} is INDEX,if you want to cache primary key, use {{{PRIMARY}}}
      * you can use {{{*}}} or {{{?}}} for wildcard character
      * default is NULL ,mean cache all index
+  * row_cache_clean_cache 
+     * this setting is for debug, if you set this to 1 online, it can clean the row cache
+     * it always be 0
+  * row_cache_use_sys_malloc
+     * if you set this variable to ON , it use system malloc instead of mempool in innodb , if you use TC_Malloc or JE_malloc ,you can set it to ON for less memory fragment
+     * default is OFF
+ 
+
 
 == Status ==
 
