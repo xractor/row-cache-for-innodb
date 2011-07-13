@@ -34,7 +34,7 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
   === add for row_cache_for_mysql.5.1.48_2011_06_16.diff ===
   * row_cache_index
      * you can set index which can be cached!
-     * like {{{test/test_large:idx_age}}}, {{{test}}} is DB , {{{test_large}}} is table , {{{idx_age}}} is index ,if you want to cache primary key, use {{{PRIMARY}}}
+     * like {{{test/test_large:idx_age}}}, {{{test}}} is DB , {{{test_large}}} is TABLE, {{{idx_age}}} is INDEX,if you want to cache primary key, use {{{PRIMARY}}}
      * you can use {{{*}}} or {{{?}}} for wildcard character
      * default is NULL ,mean cache all index
 
