@@ -1,4 +1,4 @@
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured
 = Installation=
 
 How to install row cache for innodb.
