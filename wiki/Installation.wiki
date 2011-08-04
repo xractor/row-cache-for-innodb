@@ -18,7 +18,7 @@ The patch is for mysql 5.1.48 and innodb plugin 1.0.9
 
 == Setting ==
 
-  Setting added in my.cnf:
+  Setting added in my.cnf(The Row Cache is based on innodb_plugin):
   * innodb_row_cache_mem_pool_size
      * the size of row cache used in memory.
      * default is 1M
