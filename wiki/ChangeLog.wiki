@@ -1,0 +1,10 @@
+#labels Phase-Support,Featured
+  # row_cache_for_mysql.5.1.48_2011_05_11.diff
+     * 初始版本
+  # row_cache_for_mysql.5.1.48_2011_06_16.diff
+     * 提供innodb_row_cache_additional_mem_pool_size 优化小内存分配
+     * 提供innodb_row_cache_index 可针对具体索引进行缓存
+     * 提供innodb_row_cache_clean_cache 可清缓存
+     * 提供innodb_row_cache_use_sys_malloc 可利用系统malloc进行内存分配
+  # row_cache_for_mysql.5.1.48_2011_09_27.diff
+     *修复了一个由于错误缓存了被逻辑删除的记录导致的crash bug
