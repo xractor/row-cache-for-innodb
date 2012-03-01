@@ -10,3 +10,5 @@
      * 修复了一个由于错误缓存了被逻辑删除的记录导致的crash bug
   # row_cache_for_mysql.5.1.48_2012_01_11.diff
      * 修复一个幻读的bug
+  # row_cache_for_mysql.5.1.48_2012_03_01.diff
+     * fix bug 回滚需在btr_pcur_restore_position确认pcur之后 再remove row cache 否则可能会因为pcur错位而导致crash
