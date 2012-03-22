@@ -1,4 +1,6 @@
 #labels Phase-Support,Featured
+  * row_cache_for_mysql.5.1.48_2012_03_01.diff  
+     * 避免truncate只改变tablei_id不改变index_id导致row cache不失效的bug
   * row_cache_for_mysql.5.1.48_2012_03_01.diff
      * fix bug 回滚需在btr_pcur_restore_position确认pcur之后 再remove row cache 否则可能会因为pcur错位而导致crash
   * row_cache_for_mysql.5.1.48_2012_01_11.diff
@@ -12,4 +14,3 @@
      * 提供innodb_row_cache_use_sys_malloc 可利用系统malloc进行内存分配
   * row_cache_for_mysql.5.1.48_2011_05_11.diff
      * 初始版本
-
