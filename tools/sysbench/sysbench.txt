@@ -1,0 +1,4 @@
+为row cache修改场景的sysbench
+测试命令参考
+
+sysbench --test=oltp --oltp-test-mode=simple  --oltp-skip-trx=on --oltp-table-size=80000000  --oltp-range-size=1 --mysql-host=localhost --mysql-user=xx --mysql-password=xx --oltp-read-only=on --init-rng=on --num-threads=70 --oltp-dist-type=special --oltp-dist-pct=1 --oltp-dist-res=80 --max-requests=0 --max-time=1800 run  
